@@ -1,0 +1,118 @@
+#nav{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: fixed;
+    z-index: 1;
+}
+#nav a{
+    text-decoration: none;
+}
+#nav img{
+    width: 190px;
+    height: 190px;
+}
+#nav h4{
+    text-transform: uppercase;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    /* background-color: red; */
+    position: relative;
+    background-color: rgba(0, 0, 0,0.5);
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+#page1 h1{
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+    margin: 0;
+
+}
+#page1 h1::before{
+    content: "Eat. Drink. Drive !";
+    position: absolute;
+    color: black;
+    top: 5px;
+    left:-5px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+#page1 h4{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 30px 0 5px;
+    text-transform: uppercase;
+}
+#page1 p{
+    font-size: 15px;
+    width:30%;
+    text-align: center;
+}
+
+
+
+@media (max-width:1150px) {
+    #page1{
+        padding-left: 20px;
+    }
+    #page1 h4{
+        align-self: flex-start;
+    }
+    #page1 p{
+        width:100% ;
+        text-align: left;
+        align-self: flex-start;
+    }
+    #page1{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:880px){
+    #nav{
+        gap: calc(10px + 5vw);
+    }
+    #nav img{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width:580px){
+    #nav{
+        height: 80px;
+        font-size: 10px;
+    }
+    #nav img{
+        width: 100px;
+        height: 100px;
+    }
+    #page1 h1{
+        font-size: 70px;
+    }
+    #page1 h4{
+        display: none;
+    }
+}

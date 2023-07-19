@@ -1,0 +1,46 @@
+#slide{
+    height: 40vh;
+    position:relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+}
+#slide::-webkit-scrollbar{
+    display: none;
+}
+#slide-in{
+    display: flex;
+    gap: 30px;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+#slide-in a{
+    text-decoration: none;
+}
+#slide-in h1{
+    font-size: 130px;
+    color: black;
+    -webkit-text-stroke: 2px #fff;
+    font-family: sans-serif;
+    font-weight: 900;
+    
+}
+#slide h1:hover{
+    color: #95C11E;
+    -webkit-text-stroke:transparent;
+    transition: all 0.5s;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
